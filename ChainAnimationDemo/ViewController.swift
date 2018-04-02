@@ -143,7 +143,8 @@ class ViewController: UIViewController {
     @objc func showMainViewController() {
         let mainViewController = UIViewController()
         mainViewController.view.backgroundColor = redColor
-        mainViewController.title = "Main Page"
-        self.present(mainViewController, animated: true, completion: nil)
+        let navigationController = UINavigationController(rootViewController: mainViewController)
+        mainViewController.title = "Your main VC"
+        self.present(navigationController, animated: true, completion: nil)
     }
 }
